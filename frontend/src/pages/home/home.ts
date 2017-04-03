@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+//import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -8,8 +8,41 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  private lItems = [];
+  private rItems = [];
+  private incAmount = 30;
 
+
+  constructor() {
+    for (let i = 0; i < this.incAmount; i++) {
+      this.lItems.push(i);
+      this.rItems.push(i);
+    }
   }
 
+  doLInfinite(infiniteScroll) {
+    console.log('Begin async operation');
+    setTimeout(() => {
+      var temp = this.lItems.length;
+      for (let i = temp; i < temp + this.incAmount; i++) {
+        this.lItems.push(i);
+      }
+
+      console.log('Async operation has ended');
+      infiniteScroll.complete();
+    }, 500);
+  }
+
+    doRInfinite(infiniteScroll) {
+    console.log('Begin async operation');
+    setTimeout(() => {
+      var temp = this.rItems.length;
+      for (let i = temp; i < temp + this.incAmount; i++) {
+        this.rItems.push(i);
+      }
+
+      console.log('Async operation has ended');
+      infiniteScroll.complete();
+    }, 500);
+  }
 }
