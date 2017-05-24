@@ -20,59 +20,17 @@ export class HomePage {
     }
   }
 
-doLInfinite = (infiniteScroll) => this.doInfinite(infiniteScroll, this.lItems);
-doRInfinite = (infiniteScroll) => this.doInfinite(infiniteScroll, this.rItems);
+  doLInfinite = (infiniteScroll) => this.doInfinite(infiniteScroll, this.lItems); /* Top life counter */
+  doRInfinite = (infiniteScroll) => this.doInfinite(infiniteScroll, this.rItems); /* Bottom Life counter */
 
-doInfinite = function (infiniteScroll, items) {
-  console.log('Begin async operation');
+  doInfinite = function (infiniteScroll, items) {
     setTimeout(() => {
       var temp = items.length;
       for (let i = temp; i < temp + this.incAmount; i++) {
         items.push(i);
       }
-
-      console.log('Async operation has ended');
-      infiniteScroll.complete();
-    }, 500);
-
- /* return function (items) {
-    console.log('Begin async operation');
-    setTimeout(() => {
-      var temp = this.items.length;
-      for (let i = temp; i < temp + this.incAmount; i++) {
-        this.items.push(i);
-      }
-
-      console.log('Async operation has ended');
-      infiniteScroll.complete();
-    }, 500);
-  }*/
-}
-
-
-  /*doLInfinite(infiniteScroll) {
-    console.log('Begin async operation');
-    setTimeout(() => {
-      var temp = this.lItems.length;
-      for (let i = temp; i < temp + this.incAmount; i++) {
-        this.lItems.push(i);
-      }
-
-      console.log('Async operation has ended');
       infiniteScroll.complete();
     }, 500);
   }
 
-    doRInfinite(infiniteScroll) {
-    console.log('Begin async operation');
-    setTimeout(() => {
-      var temp = this.rItems.length;
-      for (let i = temp; i < temp + this.incAmount; i++) {
-        this.rItems.push(i);
-      }
-
-      console.log('Async operation has ended');
-      infiniteScroll.complete();
-    }, 500);
-  }*/
 }
