@@ -8,22 +8,24 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  private lItems = [];
+ /* private lItems = [];
   private rItems = [];
-  private incAmount = 30;
+  private incAmount = 30;*/
 
+  life_total_one = 20;
+  life_total_two = 20;
 
   constructor() {
-    for (let i = 0; i < this.incAmount; i++) {
+    /*for (let i = 0; i < this.incAmount; i++) {
       this.lItems.push(i);
       this.rItems.push(i);
-    }
+    }*/
   }
 
-  doLInfinite = (infiniteScroll) => this.doInfinite(infiniteScroll, this.lItems); /* Top life counter */
-  doRInfinite = (infiniteScroll) => this.doInfinite(infiniteScroll, this.rItems); /* Bottom Life counter */
+  /*doLInfinite = (infiniteScroll) => this.doInfinite(infiniteScroll, this.lItems);*/ /* Top life counter */
+  /*doRInfinite = (infiniteScroll) => this.doInfinite(infiniteScroll, this.rItems);*/ /* Bottom Life counter */
 
-  doInfinite = function (infiniteScroll, items) {
+  /*doInfinite = function (infiniteScroll, items) {
     setTimeout(() => {
       var temp = items.length;
       for (let i = temp; i < temp + this.incAmount; i++) {
@@ -31,6 +33,6 @@ export class HomePage {
       }
       infiniteScroll.complete();
     }, 500);
-  }
+  }*/
 
 }

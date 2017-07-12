@@ -24517,6 +24517,72 @@ ion-navbar.toolbar {
   }
 }
 
+body {
+  background-color: black !important;
+}
+
+/*life-display {
+    margin:auto;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;       
+     height:150px;
+    width:150px;
+    background:url("../assets/images/magic-circle.jpg") ;
+
+    background-size:100%;
+    z-index:99999;
+}
+
+.lifeTotal {
+    color: #fff;
+    text-shadow: 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000, -3px 0 0 #000;
+    font-size:24pt;
+    text-align:center;
+    width:100%;
+    height:50%;
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}*/
+.life-total {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  border: 1px solid #CCCCCC;
+}
+
+.life-total span {
+  color: white;
+  font-size: 36pt;
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  padding: 5px 10px;
+  display: block;
+}
+
+button {
+  color: white;
+  font-size: 36pt;
+  background-color: transparent;
+  border: none;
+  margin: 20px;
+}
+
+life-scroll {
+  height: 47.5%;
+}
+
+.life-block-two-players {
+  height: 47.5%;
+}
+
+page-home {
+  background-color: #000000;
+}
+
 .rHealth {
   height: 47.5%;
 }
@@ -24527,4 +24593,12 @@ ion-navbar.toolbar {
 
 .textCenter {
   text-align: center;
+}
+
+.player-one {
+  background-color: green;
+}
+
+.player-two {
+  background-color: blue;
 }

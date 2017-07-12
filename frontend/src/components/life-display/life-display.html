@@ -1,0 +1,6 @@
+<div class="life-total" (swipeLeft)="changeLife(-5)" (swipeRight)="changeLife(5)">
+   <button class="add" (click)="changeLife(1)"> + </button>
+    <span>{{ lifeTotal }}</span>
+    <button class="subtract" (click)="changeLife(-1)"> - </button>
+</div>
+

@@ -6,10 +6,15 @@ import { HomePage } from '../pages/home/home';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { LifeDisplayComponent } from '../components/life-display/life-display';
+import { LifeScrollComponent } from '../components/life-scroll/life-scroll';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LifeDisplayComponent,
+    LifeScrollComponent,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -17,11 +22,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+   
   ],
   providers: [
     StatusBar,
     SplashScreen,
+
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -1,34 +1,15 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <ion-title>
-      Things
+      MTG Life Tracker
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header>-->
 
-<ion-content>
-<ion-card class="lHealth">
-<ion-content>
- <ion-list>
-   <ion-item id="lItem{{i}}" class="textCenter" *ngFor="let i of lItems">{{i}}</ion-item>
- </ion-list>
 
- <ion-infinite-scroll (ionInfinite)="doLInfinite($event)">
-   <ion-infinite-scroll-content></ion-infinite-scroll-content>
- </ion-infinite-scroll>
-</ion-content>
-</ion-card>
+<!--<life-scroll></life-scroll>
+<life-display></life-display>
+<life-scroll></life-scroll>-->
 
-<ion-card class="rHealth">
-<ion-content>
- <ion-list>
-   <ion-item id="rItem{{i}}" class="textCenter" *ngFor="let i of rItems">{{i}}</ion-item>
- </ion-list>
-
- <ion-infinite-scroll (ionInfinite)="doRInfinite($event)">
-   <ion-infinite-scroll-content></ion-infinite-scroll-content>
- </ion-infinite-scroll>
-</ion-content>
-</ion-card>
-</ion-content>
-
+<life-display id="playerOne"></life-display>
+<life-display id="playerTwo"></life-display>

@@ -1,0 +1,12 @@
+<ion-content>
+<ion-card class="health-block-2-players">
+<ion-content>
+ <ion-list>
+   <ion-item class="textCenter" *ngFor="let i of lifeArray">{{i}}</ion-item>
+ </ion-list>
+
+ <ion-infinite-scroll (ionInfinite)="doLInfinite($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+</ion-content>
+</ion-card>
